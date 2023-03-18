@@ -1,0 +1,23 @@
+$elle-success: #28a745;
+
+.elle-toggler {
+  .elle-checkbox {
+    display: none;
+
+    &:not(:checked) {
+      ~.elle-target {
+        display: none;
+      }
+    }
+  }
+}
+
+.style-elle-btn {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 4px;
+  color: white;
+  background: $elle-success;
+  border: 1px solid darken($elle-success, 10%);
+  cursor: pointer;
+}

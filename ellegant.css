@@ -1,0 +1,17 @@
+.elle-toggler .elle-checkbox {
+  display: none;
+}
+
+.elle-toggler .elle-checkbox:not(:checked)~.elle-target {
+  display: none;
+}
+
+.style-elle-btn {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 4px;
+  color: white;
+  background: #28a745;
+  border: 1px solid #1e7e34;
+  cursor: pointer;
+}

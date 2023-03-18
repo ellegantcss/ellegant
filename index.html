@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ellegant CSS</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="ellegant.css">
+</head>
+
+<body>
+  <h1>Ellegant CSS Framework</h1>
+  <p>We've been using style frameworks in the past decades which are supposed to focus on CSS. But the truth is there
+    are a lot of Javascript code being used that we could replace with some clever CSS selectors to replicate it's
+    function. Ellegant's goal is to allow CSS to be used for everything it is capable of.</p>
+  <h2>General Components</h2>
+  <p>General Components react to user interaction so you can use them for a variety of different purposes.</p>
+  <ol>
+    <li>The javascript part is only needed if you want ARIA roles;</li>
+    <li>The style-* classes are used only for visual demos, you don't actually need them;</li>
+    <li>The ID should be unique to avoid conflicts;</li>
+    <li>The <i>elle-*</i> classes and <i>for</i> attributes are needed.</li>
+  </ol>
+  <hr>
+  <h3>Toggler</h3>
+  <p>
+    A Toggler is a component that allows you to show and hide elements based on user interaction using checkboxes and
+    labels.
+  </p>
+
+  <section class="elle-toggler">
+    <label class="elle-label style-elle-btn" for="myToggler" role="switch" aria-checked="false">Toggler</label>
+    <input type="checkbox" class="elle-checkbox" id="myToggler">
+    <ul class="elle-target">
+      <li><label for="myToggler" role="switch" aria-checked="true">Click <strong>here</strong> to also toggle it from
+          inside</label></li>
+      <li>An item</li>
+      <li>Another one for good measure</li>
+    </ul>
+  </section>
+  <br>
+  <details>
+    <summary>
+      View sample code
+    </summary>
+    <div class="attributes">
+      <code class="sample"><pre>
+    &lt;section class=&quot;elle-toggler&quot;&gt;
+        &lt;label class=&quot;elle-label style-elle-btn&quot; for=&quot;myToggler&quot; role=&quot;switch&quot; aria-checked=&quot;false&quot;&gt;Toggler&lt;/label&gt;
+        &lt;input type=&quot;checkbox&quot; class=&quot;elle-checkbox&quot; id=&quot;myToggler&quot;&gt;
+        &lt;ul class=&quot;elle-target&quot;&gt;
+        &lt;li&gt;&lt;label for=&quot;myToggler&quot; role=&quot;switch&quot; aria-checked=&quot;true&quot;&gt;Click &lt;strong&gt;here&lt;/strong&gt; to also toggle it from inside&lt;/label&gt;&lt;/li&gt;
+        &lt;li&gt;An item&lt;/li&gt;
+        &lt;li&gt;Another one for good measure&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/section&gt;
+        </pre></code>
+    </div>
+  </details>
+</body>
+
+</html>

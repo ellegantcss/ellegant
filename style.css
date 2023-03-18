@@ -1,0 +1,15 @@
+code.sample {
+    background: black;
+    padding: 8px;
+    color: white;
+    display: block;
+    overflow: auto;
+    max-width: 100%;
+  }
+  pre { padding:0;margin:0;}
+  i {
+    border-radius: 3px;
+    padding: 0 6px;
+    border: 1px solid khaki;
+    background: cornsilk;
+  }
