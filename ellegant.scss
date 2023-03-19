@@ -12,6 +12,17 @@ $elle-success: #28a745;
   }
 }
 
+.elle-switcher {
+  .elle-radio {
+    display: none;
+  }
+  @for $i from 1 through 10 {
+    .elle-radio[data-nth="#{$i}"]:not(:checked) ~ .elle-target[data-nth="#{$i}"] {
+      display: none;
+    }
+  }
+}
+
 .style-elle-btn {
   display: inline-block;
   padding: 4px 8px;

@@ -59,6 +59,65 @@
         </pre></code>
     </div>
   </details>
+
+  <h3>Switcher</h3>
+  <p>
+    A Switcher is a component that allows you to show and hide elements based on user interaction using radio inputs and
+    labels. Using the default implementation there is a limit of 10 options for each switcher component.
+  </p>
+
+  <section class="elle-switcher">
+    <label class="elle-label style-elle-btn" data-nth="1" for="myFirst" role="switch" aria-checked="true">First
+      element</label>
+    <label class="elle-label style-elle-btn" data-nth="2" for="mySecond" role="switch" aria-checked="false">Second
+      element</label>
+    <label class="elle-label style-elle-btn" data-nth="3" for="myThird" role="switch" aria-checked="false">Third
+      element</label>
+    <input name="mySwitcher" type="radio" data-nth="1" class="elle-radio" id="myFirst" checked>
+    <input name="mySwitcher" type="radio" data-nth="2" class="elle-radio" id="mySecond">
+    <input name="mySwitcher" type="radio" data-nth="3" class="elle-radio" id="myThird">
+    <section class="elle-target" data-nth="1">
+      This is the first element being shown.
+    </section>
+    <section class="elle-target" data-nth="2">
+      This is the second element being shown.
+    </section>
+    <section class="elle-target" data-nth="3">
+      This is the third element being shown.
+    </section>
+  </section>
+  <br>
+  <details>
+    <summary>
+      View sample code
+    </summary>
+    <div class="attributes">
+      <code class="sample"><pre>
+        &lt;section class=&quot;elle-switcher&quot;&gt;
+        &lt;label class=&quot;elle-label style-elle-btn&quot; data-nth=&quot;1&quot; for=&quot;myFirst&quot; role=&quot;switch&quot; aria-checked=&quot;true&quot;&gt;First
+          element&lt;/label&gt;
+        &lt;label class=&quot;elle-label style-elle-btn&quot; data-nth=&quot;2&quot; for=&quot;mySecond&quot; role=&quot;switch&quot; aria-checked=&quot;false&quot;&gt;Second
+          element&lt;/label&gt;
+        &lt;label class=&quot;elle-label style-elle-btn&quot; data-nth=&quot;3&quot; for=&quot;myThird&quot; role=&quot;switch&quot; aria-checked=&quot;false&quot;&gt;Third
+          element&lt;/label&gt;
+        &lt;input name=&quot;mySwitcher&quot; type=&quot;radio&quot; data-nth=&quot;1&quot; class=&quot;elle-radio&quot; id=&quot;myFirst&quot; checked&gt;
+        &lt;input name=&quot;mySwitcher&quot; type=&quot;radio&quot; data-nth=&quot;2&quot; class=&quot;elle-radio&quot; id=&quot;mySecond&quot;&gt;
+        &lt;input name=&quot;mySwitcher&quot; type=&quot;radio&quot; data-nth=&quot;3&quot; class=&quot;elle-radio&quot; id=&quot;myThird&quot;&gt;
+        &lt;section class=&quot;elle-target&quot; data-nth=&quot;1&quot;&gt;
+          This is the first element being shown.
+        &lt;/section&gt;
+        &lt;section class=&quot;elle-target&quot; data-nth=&quot;2&quot;&gt;
+          This is the second element being shown.
+        &lt;/section&gt;
+        &lt;section class=&quot;elle-target&quot; data-nth=&quot;3&quot;&gt;
+          This is the third element being shown.
+        &lt;/section&gt;
+      &lt;/section&gt;
+        </pre></code>
+    </div>
+  </details>
+
+  <script src="ellegant.js"></script>
 </body>
 
 </html>

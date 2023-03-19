@@ -1,8 +1,41 @@
 .elle-toggler .elle-checkbox {
   display: none;
 }
+.elle-toggler .elle-checkbox:not(:checked) ~ .elle-target {
+  display: none;
+}
 
-.elle-toggler .elle-checkbox:not(:checked)~.elle-target {
+.elle-switcher .elle-radio {
+  display: none;
+}
+.elle-switcher .elle-radio[data-nth="1"]:not(:checked) ~ .elle-target[data-nth="1"] {
+  display: none;
+}
+.elle-switcher .elle-radio[data-nth="2"]:not(:checked) ~ .elle-target[data-nth="2"] {
+  display: none;
+}
+.elle-switcher .elle-radio[data-nth="3"]:not(:checked) ~ .elle-target[data-nth="3"] {
+  display: none;
+}
+.elle-switcher .elle-radio[data-nth="4"]:not(:checked) ~ .elle-target[data-nth="4"] {
+  display: none;
+}
+.elle-switcher .elle-radio[data-nth="5"]:not(:checked) ~ .elle-target[data-nth="5"] {
+  display: none;
+}
+.elle-switcher .elle-radio[data-nth="6"]:not(:checked) ~ .elle-target[data-nth="6"] {
+  display: none;
+}
+.elle-switcher .elle-radio[data-nth="7"]:not(:checked) ~ .elle-target[data-nth="7"] {
+  display: none;
+}
+.elle-switcher .elle-radio[data-nth="8"]:not(:checked) ~ .elle-target[data-nth="8"] {
+  display: none;
+}
+.elle-switcher .elle-radio[data-nth="9"]:not(:checked) ~ .elle-target[data-nth="9"] {
+  display: none;
+}
+.elle-switcher .elle-radio[data-nth="10"]:not(:checked) ~ .elle-target[data-nth="10"] {
   display: none;
 }
 
