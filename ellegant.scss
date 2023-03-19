@@ -1,13 +1,11 @@
 $elle-success: #28a745;
 
-.elle-toggler {
-  .elle-checkbox {
-    display: none;
 
-    &:not(:checked) {
-      ~.elle-target {
-        display: none;
-      }
+.elle-checkbox {
+  display: none !important;
+  &:not(:checked) {
+    + .elle-target {
+      display: none !important;
     }
   }
 }
@@ -18,7 +16,7 @@ $elle-success: #28a745;
   }
   @for $i from 1 through 10 {
     .elle-radio[data-nth="#{$i}"]:not(:checked) ~ .elle-target[data-nth="#{$i}"] {
-      display: none;
+      display: none !important;
     }
   }
 }
