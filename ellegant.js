@@ -3,7 +3,7 @@ for (checkbox of elle_checkbox) {
 	const labels = document.querySelectorAll(`.elle-label[for="${checkbox.getAttribute('id')}"]`);
   
   checkbox.addEventListener('change', c => {
-  	labels.forEach(l => l.setAttribute('aria-checked', c.target.checked));
+  	labels.forEach(l => l.setAttribute('aria-pressed', c.target.checked));
   });
 };
 

@@ -46,7 +46,7 @@
             </p>
           </div>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6 mt-4 mt-md-0">
           <div class="h-100 p-5 bg-light border rounded-3">
             <h2>Why? 🙄</h2>
             <p>
@@ -73,7 +73,7 @@
       <div class="container" id="samples">
         <div class="row">
           <div class="col-md-6">
-            <h3>🔛 Toggler</h3>
+            <h3>🔛 Toggler:</h3>
             <p>
               A Toggler is a component that allows you to show and hide an element based on user interaction using
               a checkbox and a label. The target element must have the checkbox before it, but the <i class="c">label</i> tag can be <strong>anywhere</strong>.
@@ -81,10 +81,10 @@
             </p>
     
             <section class="elle-toggler">
-              <label class="elle-label style-elle-btn" for="myToggler" role="switch" aria-checked="false">Click me</label>
+              <label class="elle-label style-elle-btn" for="myToggler" role="button" aria-pressed="false">Click me</label>
               <input type="checkbox" class="elle-checkbox" id="myToggler">
               <ul class="elle-target elle-animated-left">
-                <li><label for="myToggler" class="elle-label" role="switch" aria-checked="false">Click <strong>here</strong> to also toggle it from the inside</label></li>
+                <li><label for="myToggler" class="elle-label" role="button" aria-pressed="false">Click <strong>here</strong> to also toggle it from the inside</label></li>
                 <li>An item</li>
                 <li>Another one for good measure</li>
               </ul>
@@ -100,11 +100,11 @@
             </details>
           </div>
     
-          <div class="col-md-6">
-            <h3>🔄 Switcher</h3>
+          <div class="col-md-6 mt-4 mt-md-0">
+            <h3>🔄 Switcher:</h3>
             <p>
               A Switcher is a component that allows you to switch between elements based on user interaction using radio inputs
-              and labels. Every Switcher must be surrounded by a <i class="c">.elle-switcher</i> container, but the <i class="c">label</i> tag can be <strong>anywhere</strong>.<br>
+              and labels. Every Switcher must be surrounded by a <i class="c">.elle-switcher</i> container.<br>
               <small>Important: The default implementation limit <strong>each</strong> Switcher by 10 options.</small>
             </p>
     

@@ -40,6 +40,7 @@ i.c {
   position: relative;
   top: -1px;
   color: white;
+  word-break: break-word;
 }
 
 .text-bg-dark i.c {
