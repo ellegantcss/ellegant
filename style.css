@@ -43,9 +43,10 @@ i.c {
 }
 
 .text-bg-dark i.c {
-  background: rgb(209, 209, 209);
-  border-color: rgb(255, 255, 255);
-  color: black;
+  background: rgb(85, 85, 85);
+  border-color: rgb(0, 0, 0);
+  color: white;
+  padding: 4px 8px;
 }
 
 details summary {
@@ -61,3 +62,10 @@ details[open] summary {
 }
 
 .elle-target {margin-top: 20px;}
+
+.btn-xs {
+  font-size: 10px !important;
+  padding: 1px 4px !important;
+  vertical-align: middle;
+  margin-top:-1px;
+}
