@@ -4,7 +4,7 @@ Ellegant's goal is to allow CSS to provide everything CSS is capable of; without
 
 The bottom line is we can manipulate elements without Javascript.
 
-See it in action [here](https://lucaslealdev.github.io/ellegant/).
+See it in action [here](https://ellegantcss.github.io/ellegant/).
 <hr>
 
 ### How? 🤯
@@ -27,6 +27,6 @@ That is what we are talking about.
 
 You may include Ellegant's CSS and optional JS file using those public CDN URL:
 
-`<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lucaslealdev/ellegant@master/ellegant-min.css">`
+`<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ellegant/ellegant@master/ellegant-min.css">`
 
-`<script src="https://cdn.jsdelivr.net/gh/lucaslealdev/ellegant@master/ellegant.js"></script>`
+`<script src="https://cdn.jsdelivr.net/gh/ellegant/ellegant@master/ellegant.js"></script>`
