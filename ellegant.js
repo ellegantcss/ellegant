@@ -1,7 +1,6 @@
-const elle_toggler = document.getElementsByClassName('elle-toggler');
-for (e of elle_toggler) {
-	const labels = e.querySelectorAll('.elle-label');
-  const checkbox = e.querySelector('.elle-checkbox');
+const elle_checkbox = document.getElementsByClassName('elle-checkbox');
+for (checkbox of elle_checkbox) {
+	const labels = document.querySelectorAll(`.elle-label[for="${checkbox.getAttribute('id')}"]`);
   
   checkbox.addEventListener('change', c => {
   	labels.forEach(l => l.setAttribute('aria-checked', c.target.checked));
