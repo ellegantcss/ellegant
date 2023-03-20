@@ -15,10 +15,45 @@ $elle-success: #28a745;
     display: none;
   }
   @for $i from 1 through 10 {
-    .elle-radio[data-nth="#{$i}"]:not(:checked) ~ .elle-target[data-nth="#{$i}"] {
+    .elle-radio[data-nth="#{$i}"]:not(:checked) ~ .elle-target[data-nth="#{$i}"]:not(.animated) {
       display: none !important;
     }
+    .elle-radio[data-nth="#{$i}"]:not(:checked) ~ .elle-target[data-nth="#{$i}"]:not(.animated) {
+      position: absolute !important;
+      visibility: hidden !important;
+      z-index: -1 !important;
+      pointer-events: none !important;
+      user-select: none !important;
+    }
   }
+}
+
+.elle-target{
+  &[class*="elle-animated"] {
+    animation: top .4s ease;
+    animation-delay: 0s;
+    animation-fill-mode: forwards;
+    &.elle-animated-left{animation-name: left;}
+    &.elle-animated-right{animation-name: right;}
+    &.elle-animated-bottom{animation-name: bottom;}
+  }
+}
+
+@keyframes top {
+  from {position: relative;top: -20px;opacity: 0;}
+  to {position: relative;top:0px;opacity: 1;}
+}
+@keyframes left {
+  from {position: relative;left: -20px;opacity: 0;}
+  to {position: relative;left:0px;opacity: 1;}
+}
+@keyframes right {
+  from {position: relative;right: -20px;opacity: 0;}
+  to {position: relative;right:0px;opacity: 1;}
+}
+@keyframes bottom {
+  from {position: relative;bottom: -20px;opacity: 0;}
+  to {position: relative;bottom:0px;opacity: 1;}
 }
 
 .style-elle-btn {

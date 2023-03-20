@@ -25,8 +25,8 @@
         <div class="container-fluid py-5">
           <h1 class="display-7 fw-bold">It just works!</h1>
           <p class="col-md-8 fs-4">
-            Ellegant's goal is to allow CSS to be used for everything it is capable of without replacing your loved css
-            framework. This means showing and hiding elements without Javascript.
+            Ellegant's goal is to allow CSS to be used for everything CSS is capable of, without replacing your current framework.<br>
+            This means: we can manipulate elements without Javascript.
           </p>
           <a class="btn btn-primary btn-lg" href="#samples">See some examples</a>
         </div>
@@ -67,6 +67,7 @@
           <li>The javascript part is only needed if you want ARIA roles;</li>
           <li>The ID properties must be unique to avoid conflicts;</li>
           <li>The <i class="c">elle-*</i> classes and <i>for</i> attributes are needed.</li>
+          <li><i class="c">elle-animated-*</i> classes on target activate fade in animations from top, right, bottom or left directions.</li>
         </ol>
       </div>
       <div class="container" id="samples">
@@ -75,14 +76,14 @@
             <h3>🔛 Toggler</h3>
             <p>
               A Toggler is a component that allows you to show and hide an element based on user interaction using
-              a checkbox and a label. The target element must have the checkbox before it, but the label can be anywhere in the page.
-              The Toggler does not need a surrounding element.
+              a checkbox and a label. The target element must have the checkbox before it, but the <i class="c">label</i> tag can be <strong>anywhere</strong>.
+              A Toggler does not need a surrounding element.
             </p>
     
             <section class="elle-toggler">
               <label class="elle-label style-elle-btn" for="myToggler" role="switch" aria-checked="false">Click me</label>
               <input type="checkbox" class="elle-checkbox" id="myToggler">
-              <ul class="elle-target">
+              <ul class="elle-target elle-animated-left">
                 <li><label for="myToggler" role="switch" aria-checked="true">Click <strong>here</strong> to also toggle it from the inside</label></li>
                 <li>An item</li>
                 <li>Another one for good measure</li>
@@ -103,7 +104,7 @@
             <h3>🔄 Switcher</h3>
             <p>
               A Switcher is a component that allows you to switch between elements based on user interaction using radio inputs
-              and labels. Different from the <strong>Toggler</strong> it must be surrounded by a <i class="c">.elle-switcher</i> container.<br>
+              and labels. Every Switcher must be surrounded by a <i class="c">.elle-switcher</i> container, but the <i class="c">label</i> tag can be <strong>anywhere</strong>.<br>
               <small>Important: The default implementation limit <strong>each</strong> Switcher by 10 options.</small>
             </p>
     
@@ -115,15 +116,15 @@
 
               <!-- Pairs of inputs and target elements -->
               <input name="mySwitcher" type="radio" data-nth="1" class="elle-radio" id="myFirst" checked>
-              <section class="elle-target" data-nth="1">
+              <section class="elle-target elle-animated-top" data-nth="1">
                 This is the first element being shown.
               </section>
               <input name="mySwitcher" type="radio" data-nth="2" class="elle-radio" id="mySecond">
-              <section class="elle-target" data-nth="2">
+              <section class="elle-target elle-animated-right" data-nth="2">
                 This is the second element being shown.
               </section>
               <input name="mySwitcher" type="radio" data-nth="3" class="elle-radio" id="myThird">
-              <section class="elle-target" data-nth="3">
+              <section class="elle-target elle-animated-bottom" data-nth="3">
                 This is the third element being shown.
               </section>
             </section>
