@@ -27,6 +27,6 @@ That is what we are talking about.
 
 You may include Ellegant's CSS and optional JS file using those public CDN URL:
 
-`<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ellegant/ellegant@master/ellegant-min.css">`
+`<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ellegant/ellegant@master/ellegant.min.css">`
 
 `<script src="https://cdn.jsdelivr.net/gh/ellegant/ellegant@master/ellegant.js"></script>`

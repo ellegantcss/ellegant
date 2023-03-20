@@ -18,6 +18,7 @@
   pointer-events: none !important;
   -webkit-user-select: none !important;
      -moz-user-select: none !important;
+      -ms-user-select: none !important;
           user-select: none !important;
 }
 .elle-switcher .elle-radio[data-nth="2"]:not(:checked) ~ .elle-target[data-nth="2"]:not(.animated) {
@@ -30,6 +31,7 @@
   pointer-events: none !important;
   -webkit-user-select: none !important;
      -moz-user-select: none !important;
+      -ms-user-select: none !important;
           user-select: none !important;
 }
 .elle-switcher .elle-radio[data-nth="3"]:not(:checked) ~ .elle-target[data-nth="3"]:not(.animated) {
@@ -42,6 +44,7 @@
   pointer-events: none !important;
   -webkit-user-select: none !important;
      -moz-user-select: none !important;
+      -ms-user-select: none !important;
           user-select: none !important;
 }
 .elle-switcher .elle-radio[data-nth="4"]:not(:checked) ~ .elle-target[data-nth="4"]:not(.animated) {
@@ -54,6 +57,7 @@
   pointer-events: none !important;
   -webkit-user-select: none !important;
      -moz-user-select: none !important;
+      -ms-user-select: none !important;
           user-select: none !important;
 }
 .elle-switcher .elle-radio[data-nth="5"]:not(:checked) ~ .elle-target[data-nth="5"]:not(.animated) {
@@ -66,6 +70,7 @@
   pointer-events: none !important;
   -webkit-user-select: none !important;
      -moz-user-select: none !important;
+      -ms-user-select: none !important;
           user-select: none !important;
 }
 .elle-switcher .elle-radio[data-nth="6"]:not(:checked) ~ .elle-target[data-nth="6"]:not(.animated) {
@@ -78,6 +83,7 @@
   pointer-events: none !important;
   -webkit-user-select: none !important;
      -moz-user-select: none !important;
+      -ms-user-select: none !important;
           user-select: none !important;
 }
 .elle-switcher .elle-radio[data-nth="7"]:not(:checked) ~ .elle-target[data-nth="7"]:not(.animated) {
@@ -90,6 +96,7 @@
   pointer-events: none !important;
   -webkit-user-select: none !important;
      -moz-user-select: none !important;
+      -ms-user-select: none !important;
           user-select: none !important;
 }
 .elle-switcher .elle-radio[data-nth="8"]:not(:checked) ~ .elle-target[data-nth="8"]:not(.animated) {
@@ -102,6 +109,7 @@
   pointer-events: none !important;
   -webkit-user-select: none !important;
      -moz-user-select: none !important;
+      -ms-user-select: none !important;
           user-select: none !important;
 }
 .elle-switcher .elle-radio[data-nth="9"]:not(:checked) ~ .elle-target[data-nth="9"]:not(.animated) {
@@ -114,6 +122,7 @@
   pointer-events: none !important;
   -webkit-user-select: none !important;
      -moz-user-select: none !important;
+      -ms-user-select: none !important;
           user-select: none !important;
 }
 .elle-switcher .elle-radio[data-nth="10"]:not(:checked) ~ .elle-target[data-nth="10"]:not(.animated) {
@@ -126,22 +135,42 @@
   pointer-events: none !important;
   -webkit-user-select: none !important;
      -moz-user-select: none !important;
+      -ms-user-select: none !important;
           user-select: none !important;
 }
 
 .elle-target[class*=elle-animated] {
-  animation: top 0.4s ease;
-  animation-delay: 0s;
-  animation-fill-mode: forwards;
+  -webkit-animation: top 0.4s ease;
+          animation: top 0.4s ease;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 .elle-target[class*=elle-animated].elle-animated-left {
-  animation-name: left;
+  -webkit-animation-name: left;
+          animation-name: left;
 }
 .elle-target[class*=elle-animated].elle-animated-right {
-  animation-name: right;
+  -webkit-animation-name: right;
+          animation-name: right;
 }
 .elle-target[class*=elle-animated].elle-animated-bottom {
-  animation-name: bottom;
+  -webkit-animation-name: bottom;
+          animation-name: bottom;
+}
+
+@-webkit-keyframes top {
+  from {
+    position: relative;
+    top: -20px;
+    opacity: 0;
+  }
+  to {
+    position: relative;
+    top: 0px;
+    opacity: 1;
+  }
 }
 
 @keyframes top {
@@ -153,6 +182,18 @@
   to {
     position: relative;
     top: 0px;
+    opacity: 1;
+  }
+}
+@-webkit-keyframes left {
+  from {
+    position: relative;
+    left: -20px;
+    opacity: 0;
+  }
+  to {
+    position: relative;
+    left: 0px;
     opacity: 1;
   }
 }
@@ -168,6 +209,18 @@
     opacity: 1;
   }
 }
+@-webkit-keyframes right {
+  from {
+    position: relative;
+    right: -20px;
+    opacity: 0;
+  }
+  to {
+    position: relative;
+    right: 0px;
+    opacity: 1;
+  }
+}
 @keyframes right {
   from {
     position: relative;
@@ -177,6 +230,18 @@
   to {
     position: relative;
     right: 0px;
+    opacity: 1;
+  }
+}
+@-webkit-keyframes bottom {
+  from {
+    position: relative;
+    bottom: -20px;
+    opacity: 0;
+  }
+  to {
+    position: relative;
+    bottom: 0px;
     opacity: 1;
   }
 }
@@ -200,4 +265,5 @@
   background: #28a745;
   border: 1px solid #1e7e34;
   cursor: pointer;
-}/*# sourceMappingURL=ellegant.css.map */
+}
+/*# sourceMappingURL=ellegant.css.map */
