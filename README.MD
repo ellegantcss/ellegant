@@ -1,8 +1,8 @@
 # Ellegant CSS microframework
 
-Ellegant's goal is to allow CSS to provide everything CSS is capable of; without replacing your current framework.
+Ellegant is a CSS framework that aims to provide user interaction without requiring any Javascript.
 
-The bottom line is we can manipulate elements without Javascript.
+With inputs and labels, Ellegant targets elements providing a fast and clean user experience even on low-end mobile devices.
 
 See it in action [here](https://ellegantcss.github.io/ellegant/).
 <hr>
