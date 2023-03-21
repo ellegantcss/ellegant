@@ -271,8 +271,8 @@
     switcher.innerText = indent.html(document.querySelector('.elle-switcher').outerHTML, { tabString: '  ' });
     switcher.dataset.code = indent.html(document.querySelector('.elle-switcher').outerHTML, { tabString: '  ' });
 
-    menu.innerText = indent.html(document.querySelector('.menu').outerHTML, { tabString: '  ' });
-    menu.dataset.code = indent.html(document.querySelector('.menu').outerHTML, { tabString: '  ' });
+    menu.innerText = indent.html(document.querySelector('.menu').innerHTML, { tabString: '  ' }).substring(2);
+    menu.dataset.code = indent.html(document.querySelector('.menu').innerHTML, { tabString: '  ' }).substring(2);
 
     document.querySelectorAll('code')
       .forEach(e => {
