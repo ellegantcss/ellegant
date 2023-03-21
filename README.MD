@@ -1,6 +1,6 @@
 # Ellegant CSS microframework
 
-Ellegant is a CSS framework that aims to provide user interaction without requiring any Javascript.
+Ellegant is a CSS framework that aims to provide user interaction with very little or no Javascript at all.
 
 With inputs and labels, Ellegant targets elements providing a fast and clean user experience even on low-end mobile devices.
 
