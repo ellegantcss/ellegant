@@ -58,6 +58,9 @@ $elle-success: #28a745;
     border-right: 1px solid rgb(153, 153, 153);
     li {
       border-bottom: 1px solid rgb(232, 232, 232);
+      label {
+        display: block;
+      }
       &.text, a {
         display: block;
         padding: 10px 10px 10px 10px;

@@ -59,6 +59,9 @@
 .elle-menu ul li {
   border-bottom: 1px solid rgb(232, 232, 232);
 }
+.elle-menu ul li label {
+  display: block;
+}
 .elle-menu ul li.text, .elle-menu ul li a {
   display: block;
   padding: 10px 10px 10px 10px;
