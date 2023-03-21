@@ -70,3 +70,7 @@ details[open] summary {
   vertical-align: middle;
   margin-top:-1px;
 }
+
+.soft-bg {
+ background-color: rgb(247, 247, 247);
+}
