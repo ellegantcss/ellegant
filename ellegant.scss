@@ -1,11 +1,97 @@
 $elle-success: #28a745;
 
+.elle-menu {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  z-index: 999999;
+  visibility: hidden;
+  transition: visibility 0ms 300ms ease;
+  .elle-x {
+    font-size: 20px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    cursor: pointer;
+    border: none;
+    padding: 0;
+    background: none !important;
+    height: 30px;
+    width: 30px;
+    line-height: 25px;
+    text-align: center;
+    label {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .elle-shadow {
+    cursor: pointer;
+    background: black;
+    opacity: 0;
+    position: absolute;
+    transition: opacity 300ms 200ms ease;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+  }
+  ul {
+    transform: translateX(-101%);
+    transition: transform 300ms 0ms ease;
+    font-size: 18px;
+    list-style-type: none;
+    padding: 0;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-bottom: env(safe-area-inset-bottom);
+    overflow-y: auto;
+    position: absolute;
+    min-width: 200px;
+    height: 100%;
+    z-index: 1;
+    top: 0px;
+    left: 0px;
+    background: white;
+    border-right: 1px solid rgb(153, 153, 153);
+    li {
+      border-bottom: 1px solid rgb(232, 232, 232);
+      &.text, a {
+        display: block;
+        padding: 10px 10px 10px 10px;
+      }
+      a {
+        text-decoration: none;
+        color: black;
+      }
+      &:hover {
+        background: rgb(246, 246, 246);
+      }
+    }
+  }
+}
 
 .elle-checkbox {
   display: none !important;
   &:not(:checked) {
     + .elle-target {
       display: none !important;
+    }
+  }
+  &:checked {
+    + .elle-menu {
+      visibility: visible;
+      transition: visibility 0ms 0s ease;
+      .elle-shadow {
+        opacity: .6;
+        transition: opacity 300ms 0ms ease;
+      }
+      ul {
+        transform: translateX(0%);
+        transition: transform 300ms 200ms ease;
+      }
     }
   }
 }

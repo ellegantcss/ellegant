@@ -1,8 +1,93 @@
+.elle-menu {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  z-index: 999999;
+  visibility: hidden;
+  transition: visibility 0ms 300ms ease;
+}
+.elle-menu .elle-x {
+  font-size: 20px;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  cursor: pointer;
+  border: none;
+  padding: 0;
+  background: none !important;
+  height: 30px;
+  width: 30px;
+  line-height: 25px;
+  text-align: center;
+}
+.elle-menu .elle-x label {
+  width: 100%;
+  height: 100%;
+}
+.elle-menu .elle-shadow {
+  cursor: pointer;
+  background: black;
+  opacity: 0;
+  position: absolute;
+  transition: opacity 300ms 200ms ease;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+}
+.elle-menu ul {
+  transform: translateX(-101%);
+  transition: transform 300ms 0ms ease;
+  font-size: 18px;
+  list-style-type: none;
+  padding: 0;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-bottom: env(safe-area-inset-bottom);
+  overflow-y: auto;
+  position: absolute;
+  min-width: 200px;
+  height: 100%;
+  z-index: 1;
+  top: 0px;
+  left: 0px;
+  background: white;
+  border-right: 1px solid rgb(153, 153, 153);
+}
+.elle-menu ul li {
+  border-bottom: 1px solid rgb(232, 232, 232);
+}
+.elle-menu ul li.text, .elle-menu ul li a {
+  display: block;
+  padding: 10px 10px 10px 10px;
+}
+.elle-menu ul li a {
+  text-decoration: none;
+  color: black;
+}
+.elle-menu ul li:hover {
+  background: rgb(246, 246, 246);
+}
+
 .elle-checkbox {
   display: none !important;
 }
 .elle-checkbox:not(:checked) + .elle-target {
   display: none !important;
+}
+.elle-checkbox:checked + .elle-menu {
+  visibility: visible;
+  transition: visibility 0ms 0s ease;
+}
+.elle-checkbox:checked + .elle-menu .elle-shadow {
+  opacity: 0.6;
+  transition: opacity 300ms 0ms ease;
+}
+.elle-checkbox:checked + .elle-menu ul {
+  transform: translateX(0%);
+  transition: transform 300ms 200ms ease;
 }
 
 .elle-switcher .elle-radio {

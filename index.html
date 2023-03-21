@@ -62,7 +62,7 @@
       <hr>
       
       <div class="mt-4 p-3 mb-4 text-bg-dark rounded-3">
-        <h2>😎 General Components</h2>
+        <h2>🧩 General Components</h2>
         <p>General Components react to user interaction in a way you can apply them for different purposes.</p>
         <ol>
           <li>The javascript portion is only needed if you want ARIA roles;</li>
@@ -140,6 +140,59 @@
         </div>
       </div>
 
+      <hr>
+      
+      <div class="mt-4 p-3 mb-4 text-bg-dark rounded-3">
+        <h2>🍰 Single Components</h2>
+        <p>Single components are seen on the web, commonly requiring Javascript.</p>
+        <ol>
+          <li>The javascript portion is only needed if you want ARIA roles;</li>
+          <li>The ID properties must be unique to avoid conflicts;</li>
+          <li>The <i class="c">elle-*</i> classes and <i>for</i> attributes are needed.</li>
+        </ol>
+      </div>
+      <div class="container" id="samples">
+        <div class="row">
+          <div class="col-md-12">
+            <h3>🍔 Menu:</h3>
+            <p>
+              The mobile hamburger menu is a common navigation design pattern that is used in many mobile applications and websites.
+              When users tap on the hamburger icon, a menu panel slides in from the left-hand side of the screen, revealing a list of navigation links or other options.<br>
+              <i>But take note, if you need anchor links inside it, you'll need a little click event.</i>
+            </p>
+    
+            <section class="menu">
+              <label class="elle-label style-elle-btn" for="myMenu" role="button" aria-pressed="false">Open</label>
+              <input class="elle-checkbox" type="checkbox" id="myMenu"/>
+              <nav class="elle-menu">
+                <label class="elle-label elle-shadow" for="myMenu" role="button" aria-pressed="false"></label>
+                <ul>
+                  <li class="elle-x">
+                    <label class="elle-label" for="myMenu" role="button" aria-pressed="false">x</label>
+                  </li>
+                  <li class="text">This isn't a link</li>
+                  <li><a href="/">This is a link</a></li>
+                  <li>
+                    <label class="elle-label" for="myMenu" role="button" aria-pressed="false">
+                      <a onclick="this.parentElement.click();" href="#">Anchor link</a>
+                    </label>
+                  </li>
+                </ul>
+              </nav>
+            </section>
+            <br>
+            <details>
+              <summary>
+                View sample code
+              </summary>
+              <div class="attributes">
+                <pre><code id="menu"></code></pre>
+              </div>
+            </details>
+          </div>
+        </div>
+      </div>
+
       <div class="mt-4 p-4 mb-4 text-bg-dark rounded-3" id="howto">
         <h2>🔥 How to use</h2>
         <p>You may include Ellegant's CSS and optional JS file using those public CDN URL:</p>
@@ -149,7 +202,7 @@
         <i class="c">&lt;script src=&quot;https://cdn.jsdelivr.net/gh/ellegantcss/ellegant@master/ellegant.js&quot;&gt;&lt;/script&gt;</i> <button onclick="prevCopy(this);" class="btn btn-outline-secondary btn-sm btn-xs" data-text="copy JS">copy JS</button>
       </div>
 
-      <div class="mt-4 p-2 mb-4 bg-light rounded-3" id="howto">
+      <div class="mt-4 p-3 mb-4 bg-light rounded-3" id="howto">
         <h2>💻 How to contribute</h2>
         <p>Help develop Ellegant by writing code!</p>
         <p>It is important to note that we use <a target="_blank" href="https://sass-lang.com/dart-sass">Dart Sass</a> to transform <i class="c">SCSS</i> into <i class="c">CSS</i> so we only write SCSS and JS. This can be achieved with the <a target="_blank" href="https://github.com/irispixel/vscode-dartsass">vscode-dartsass</a> extension.</p>
@@ -174,6 +227,9 @@
 
   switcher.innerText = indent.html(document.querySelector('.elle-switcher').outerHTML, {tabString: '  '});
   switcher.dataset.code = indent.html(document.querySelector('.elle-switcher').outerHTML, {tabString: '  '});
+
+  menu.innerText = indent.html(document.querySelector('.elle-menu').outerHTML, {tabString: '  '});
+  menu.dataset.code = indent.html(document.querySelector('.elle-menu').outerHTML, {tabString: '  '});
 
   document.querySelectorAll('code')
     .forEach(e => {
