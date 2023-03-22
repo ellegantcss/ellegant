@@ -98,9 +98,11 @@
                 <input type="checkbox" class="elle-checkbox" id="myToggler">
                 <ul class="elle-target elle-animated-left">
                   <li><label for="myToggler" class="elle-label" role="button" aria-pressed="false">Click
-                      <strong>here</strong> to also toggle it from the inside</label></li>
-                  <li>An item</li>
-                  <li>Another one for good measure</li>
+                      <strong>here</strong> to also toggle it from the inside.</label></li>
+                  <li>Everyday people like you and me,</li>
+                  <li>Just want to live, naturally.</li>
+                  <li>If you see someone you could help,</li>
+                  <li>God is talking to you as He talks to me.</li>
                 </ul>
               </section>
               <br>
@@ -126,24 +128,30 @@
               <section class="elle-switcher">
                 <!-- The label buttons -->
                 <label class="elle-label style-elle-btn" data-nth="1" for="myFirst" role="switch"
-                  aria-checked="true">First element</label>
+                  aria-checked="true">Show 1</label>
                 <label class="elle-label style-elle-btn" data-nth="2" for="mySecond" role="switch"
-                  aria-checked="false">Second element</label>
+                  aria-checked="false">Show 2</label>
                 <label class="elle-label style-elle-btn" data-nth="3" for="myThird" role="switch"
-                  aria-checked="false">Third element</label>
+                  aria-checked="false">Show 3</label>
+                <label class="elle-label style-elle-btn" data-nth="4" for="myFourth" role="switch"
+                  aria-checked="false">Show 4</label>
 
                 <!-- Pairs of inputs and target elements -->
                 <input name="mySwitcher" type="radio" data-nth="1" class="elle-radio" id="myFirst" checked>
                 <section class="elle-target elle-animated-top" data-nth="1">
-                  This is the first element being shown.
+                  From time to time life will crumble
                 </section>
                 <input name="mySwitcher" type="radio" data-nth="2" class="elle-radio" id="mySecond">
                 <section class="elle-target elle-animated-right" data-nth="2">
-                  This is the second element being shown.
+                  Those days your soul will make you mumble
                 </section>
                 <input name="mySwitcher" type="radio" data-nth="3" class="elle-radio" id="myThird">
                 <section class="elle-target elle-animated-bottom" data-nth="3">
-                  This is the third element being shown.
+                  But you should not focus on your sorrow
+                </section>
+                <input name="mySwitcher" type="radio" data-nth="4" class="elle-radio" id="myFourth">
+                <section class="elle-target elle-animated-top" data-nth="4">
+                  Because you might be Found tomorrow.
                 </section>
               </section>
               <br>
@@ -173,7 +181,7 @@
     </div>
     <div class="container" id="samples">
       <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-6">
           <h3>🍔 Menu:</h3>
           <p>
             The mobile hamburger menu is a common navigation design pattern that is used in many mobile applications and
@@ -210,6 +218,46 @@
             </summary>
             <div class="attributes">
               <pre><code id="menu"></code></pre>
+            </div>
+          </details>
+        </div>
+        <div class="col-md-6">
+          <h3>🟦 Modal:</h3>
+          <p>
+            Modal is a type of element that is displayed on top of the current window and requires the user to interact
+            with it before continuing.<br>
+            The target element must have the checkbox preceding it, while the label can be placed anywhere. The
+            Modal does <strong>not</strong> require a surrounding element, making it a versatile and flexible
+            component.
+          </p>
+
+          <section class="l-modal">
+            <label class="elle-label style-elle-btn" for="myModal" role="button" aria-pressed="false">Show</label>
+            <input type="checkbox" class="elle-checkbox" id="myModal">
+            <dialog open class="elle-modal">
+              <section class="elle-animated-top">
+                <header>
+                  <h5>Warning</h5>
+                  <label class="elle-label" for="myModal" role="button" aria-pressed="false">×</label>
+                </header>
+                <main>
+                  <h3>Hey, you!</h3>
+                  <p>Some surprises are more unexpected than others, which doesn't mean you shouldn't pay attention to them all. This Modal's neither that big nor too small.</p>
+                  <p>It is important to note that the <i class="c">section</i> part of a Modal can also include <i class="c">.elle-animated-*</i> and be <i class="c">.elle-big</i> or <i class="c">.elle-small</i></p>
+                </main>
+                <footer>
+                  <label class="elle-label style-elle-btn" for="myModal" role="button" aria-pressed="false">I got it</label>
+                </footer>
+              </section>
+            </dialog>
+          </section>
+          <br>
+          <details>
+            <summary>
+              View sample code
+            </summary>
+            <div class="attributes">
+              <pre><code id="modal"></code></pre>
             </div>
           </details>
         </div>
@@ -250,7 +298,8 @@
             <li>Be respectful and explain what you meant to fix, implement or improve in your <i>pull request</i>.
               <small style="opacity: 0.7;">The better you explain what you did, the better we can together explain it to
                 the
-                world.</small></li>
+                world.</small>
+            </li>
           </ol>
         </div>
       </div>
@@ -273,6 +322,9 @@
 
     menu.innerText = indent.html(document.querySelector('.menu').innerHTML, { tabString: '  ' }).substring(2);
     menu.dataset.code = indent.html(document.querySelector('.menu').innerHTML, { tabString: '  ' }).substring(2);
+
+    modal.innerText = indent.html(document.querySelector('.l-modal').innerHTML, { tabString: '  ' }).substring(2);
+    modal.dataset.code = indent.html(document.querySelector('.l-modal').innerHTML, { tabString: '  ' }).substring(2);
 
     document.querySelectorAll('code')
       .forEach(e => {

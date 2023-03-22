@@ -55,6 +55,7 @@ $elle-success: #28a745;
     top: 0px;
     left: 0px;
     background: white;
+    color: rgb(42, 42, 42);
     border-right: 1px solid rgb(153, 153, 153);
     li {
       border-bottom: 1px solid rgb(232, 232, 232);
@@ -67,11 +68,79 @@ $elle-success: #28a745;
       }
       a {
         text-decoration: none;
-        color: black;
+        color: rgb(42, 42, 42);
       }
       &:hover {
         background: rgb(246, 246, 246);
       }
+    }
+  }
+}
+
+.elle-modal {
+  background-color: transparent;
+  border: 0;
+  color: rgb(42, 42, 42);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  z-index: 999999;
+  visibility: hidden;
+  transition: visibility 0ms 300ms ease;
+  &::before {
+    content: "";
+    background: black;
+    opacity: 0;
+    position: absolute;
+    transition: opacity 300ms 0ms ease;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+  }
+  & > section {
+    display: none;
+    background-color: white;
+    max-width: 500px;
+    &.elle-big { max-width: 750px; }
+    &.elle-small { max-width: 310px; }
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: 0.3rem;
+    position: fixed;
+    margin: 20px auto;
+    &[class*="elle-animated"] {
+      animation: top .4s ease;
+      animation-delay: 0s;
+      animation-fill-mode: forwards;
+      &.elle-animated-left{animation-name: left;}
+      &.elle-animated-right{animation-name: right;}
+      &.elle-animated-bottom{animation-name: bottom;}
+    }
+    header {
+      padding: 14px 19px;
+      border-bottom: 1px solid rgb(233, 236, 239);
+      position: relative;
+      h5 {margin: 0;}
+      label {
+        user-select: none;
+        position: absolute;
+        top: 7px;
+        right: 3px;
+        width: 35px;
+        height: 35px;
+        text-align: center;
+        line-height: 35px;
+        font-size: 24px;
+      }
+    }
+    main, footer {
+      padding: 16px;
+    }
+    footer {
+      border-top: 1px solid rgb(233, 236, 239);
+      text-align: right;
     }
   }
 }
@@ -85,12 +154,25 @@ $elle-success: #28a745;
   }
   &:checked {
     + .elle-menu {
-      visibility: visible;
-      transition: visibility 0ms 0s ease;
       .elle-shadow {
         opacity: .6;
         transition: opacity 300ms 0ms ease;
       }
+    }
+    + .elle-modal {
+      &::before {
+        opacity: .6;
+        transition: opacity 300ms 0ms ease;
+      }
+      visibility: visible;
+      transition: visibility 0ms 0s ease;
+      & > section {
+        display: block;
+      }
+    }
+    + .elle-menu {
+      visibility: visible;
+      transition: visibility 0ms 0s ease;
       ul {
         transform: translateX(0%);
         transition: transform 300ms 200ms ease;
@@ -129,19 +211,19 @@ $elle-success: #28a745;
 }
 
 @keyframes top {
-  from {position: relative;top: -20px;opacity: 0;}
+  from {position: relative;top: -30px;opacity: 0;}
   to {position: relative;top:0px;opacity: 1;}
 }
 @keyframes left {
-  from {position: relative;left: -20px;opacity: 0;}
+  from {position: relative;left: -30px;opacity: 0;}
   to {position: relative;left:0px;opacity: 1;}
 }
 @keyframes right {
-  from {position: relative;right: -20px;opacity: 0;}
+  from {position: relative;right: -30px;opacity: 0;}
   to {position: relative;right:0px;opacity: 1;}
 }
 @keyframes bottom {
-  from {position: relative;bottom: -20px;opacity: 0;}
+  from {position: relative;bottom: -30px;opacity: 0;}
   to {position: relative;bottom:0px;opacity: 1;}
 }
 
@@ -153,4 +235,5 @@ $elle-success: #28a745;
   background: $elle-success;
   border: 1px solid darken($elle-success, 10%);
   cursor: pointer;
+  user-select: none;
 }
