@@ -36,7 +36,7 @@ Help develop Ellegant by writing code!
 
 It is important to note that we use [Dart Sass](https://sass-lang.com/dart-sass) to transform `SCSS` into `CSS` so we only write SCSS and JS. This can be achieved with the [vscode-dartsass](https://github.com/irispixel/vscode-dartsass) extension.
 
-1. Fork our repository <a href="https://github.com/ellegantcss" target="_blank">here</a>;
+1. Fork our repository (this one);
 1. Make your changes to `ellegant.scss` and/or `ellegant.js` and push them to your repo;
 1. Submit your pull request; *Instructions on how to do that are [here](https://docs.github.com/pt/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request-from-a-fork)*
 1. Be respectful and explain what you meant to fix, implement or improve in your pull request. *The better you explain what you did, the better we can together explain it to the world.*
