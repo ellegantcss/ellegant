@@ -1,4 +1,10 @@
-# Ellegant CSS microframework
+<p align="center">
+  <a href="https://ellegantcss.github.io">
+    <img src="apple-touch-icon.png" alt="Logo" width="200">
+  </a>
+</p>
+
+<h1 align="center">Ellegant CSS microframework</h1>
 
 Ellegant is a CSS framework that aims to provide user interaction with very little or no Javascript at all.
 
