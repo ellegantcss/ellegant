@@ -4,7 +4,7 @@ Ellegant is a CSS framework that aims to provide user interaction with very litt
 
 With inputs and labels, Ellegant targets elements providing a fast and clean user experience even on low-end mobile devices.
 
-See it in action [here](https://ellegantcss.github.io/ellegant/).
+See it in action [here](https://ellegantcss.github.io/).
 <hr>
 
 ### How? 🤯
