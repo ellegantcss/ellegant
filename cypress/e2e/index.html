@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../../ellegant.min.css">
+</head>
+
+<body>
+  <label id="toggler" class="elle-label style-elle-btn" for="myToggler" role="button" aria-pressed="false">Open
+    toggler</label>
+  <input type="checkbox" class="elle-checkbox" id="myToggler">
+  <ul class="elle-target elle-animated-left" id="togglerTarget">
+    <li>
+      <label for="myToggler" class="elle-label" role="button" aria-pressed="false">
+        Click <strong>here</strong> to also toggle it from the inside.
+      </label>
+    </li>
+    <li>Everyday people like you and me,</li>
+    <li>Just want to live, naturally.</li>
+    <li>If you see someone you could help,</li>
+    <li>God is talking to you as He talks to me.</li>
+  </ul>
+
+  <section class="elle-switcher" id="switcher">
+    <!-- The label buttons -->
+    <label class="elle-label style-elle-btn" data-nth="1" for="myFirst" role="switch" aria-checked="true">Show
+      1</label>
+    <label class="elle-label style-elle-btn" data-nth="2" for="mySecond" role="switch" aria-checked="false">Show
+      2</label>
+    <label class="elle-label style-elle-btn" data-nth="3" for="myThird" role="switch" aria-checked="false">Show
+      3</label>
+    <label class="elle-label style-elle-btn" data-nth="4" for="myFourth" role="switch" aria-checked="false">Show
+      4</label>
+
+    <!-- Pairs of inputs and target elements -->
+    <input name="mySwitcher" type="radio" data-nth="1" class="elle-radio" id="myFirst" checked="">
+    <section class="elle-target elle-animated-top" data-nth="1">
+      From time to time life will crumble
+    </section>
+    <input name="mySwitcher" type="radio" data-nth="2" class="elle-radio" id="mySecond">
+    <section class="elle-target elle-animated-right" data-nth="2">
+      Those days your soul will make you mumble
+    </section>
+    <input name="mySwitcher" type="radio" data-nth="3" class="elle-radio" id="myThird">
+    <section class="elle-target elle-animated-bottom" data-nth="3">
+      But you should not focus on your sorrow
+    </section>
+    <input name="mySwitcher" type="radio" data-nth="4" class="elle-radio" id="myFourth">
+    <section class="elle-target elle-animated-top" data-nth="4">
+      Because you might be Found tomorrow.
+    </section>
+  </section>
+
+  <label class="elle-label style-elle-btn" for="myMenu" role="button" aria-pressed="false">Open ►</label>
+  <input class="elle-checkbox" type="checkbox" id="myMenu">
+  <nav class="elle-menu">
+    <label class="elle-label elle-shadow" for="myMenu" role="button" aria-pressed="false"></label>
+    <ul>
+      <li class="elle-x">
+        <label class="elle-label" for="myMenu" role="button" aria-pressed="false">x</label>
+      </li>
+      <li class="text">This isn't a link</li>
+      <li><a href="/">This is a link</a></li>
+      <li>
+        <label class="elle-label" for="myMenu" role="button" aria-pressed="false">
+          <a onclick="this.parentElement.click();" href="#">Anchor link</a>
+        </label>
+      </li>
+    </ul>
+  </nav>
+
+  <label class="elle-label style-elle-btn" for="myModal" role="button" aria-pressed="false">Show modal</label>
+  <input type="checkbox" class="elle-checkbox" id="myModal">
+  <dialog open="" class="elle-modal">
+    <section class="elle-animated-top">
+      <header>
+        <h5>Warning</h5>
+        <label class="elle-label" for="myModal" role="button" aria-pressed="false">×</label>
+      </header>
+      <main>
+        <h3>Hey, you!</h3>
+        <p>Some surprises are more unexpected than others, which doesn't mean you shouldn't pay attention to
+          them all. This Modal's neither that big nor too small.</p>
+        <p>It is important to note that the <i class="c">section</i> part of a Modal can also include <i
+            class="c">.elle-animated-*</i> and be <i class="c">.elle-big</i> or <i class="c">.elle-small</i>
+        </p>
+      </main>
+      <footer>
+        <label class="elle-label style-elle-btn" for="myModal" role="button" aria-pressed="false">I got
+          it</label>
+      </footer>
+    </section>
+  </dialog>
+
+
+  <script src="../../ellegant.js"></script>
+</body>
+
+</html>
