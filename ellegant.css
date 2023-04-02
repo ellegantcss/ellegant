@@ -460,6 +460,44 @@
     opacity: 1;
   }
 }
+.elle-on {
+  outline: none;
+  font-size: inherit;
+  vertical-align: middle;
+  width: 1.6em;
+  height: 1em;
+  background: silver;
+  border-radius: 1em;
+  border: none;
+  position: relative;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  box-sizing: content-box;
+  transition: all 200ms ease;
+}
+.elle-on::before {
+  content: "";
+  position: absolute;
+  width: 0.85em;
+  height: 0.85em;
+  background: white;
+  top: 0.073em;
+  border-radius: 100%;
+  transition: all 200ms ease;
+  box-shadow: 0.05em 0.05em 0.15em rgba(0, 0, 0, 0.353);
+}
+.elle-on:not(:checked)::before {
+  left: 0.09em;
+}
+.elle-on:checked {
+  background: #0ed428;
+}
+.elle-on:checked::before {
+  left: calc(100% - 0.95em);
+}
+
 .style-elle-btn {
   display: inline-block;
   padding: 4px 8px;
